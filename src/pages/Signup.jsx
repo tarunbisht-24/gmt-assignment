@@ -38,9 +38,16 @@ const Signup = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const [hasAgreedToTerms, setHasAgreedToTerms] = useState(false);
+
   // handle sign up with email and password
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!hasAgreedToTerms) {
+      toast.error("You must agree to the terms and conditions to register.");
+      return;
+    }
+
     setIsDisable({
       inputfield: true,
       submitbutton: true,
@@ -163,8 +170,8 @@ const Signup = () => {
             type="checkbox"
             id="condition"
             name="condition"
-            className="accent-orange text-white w-6 h-6 border-0"
-            defaultChecked
+            className="accent-orange text-white w-6 h-6 border-0" 
+            onChange={(e) => setHasAgreedToTerms(e.target.checked)}
           />
           <label
             htmlFor="condition"
