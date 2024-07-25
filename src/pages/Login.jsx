@@ -143,7 +143,7 @@ const Login = () => {
 
         <div className="w-full flex justify-end items-start gap-2">
           <a
-            href="#"
+            href="/resetpassword"
             className="text-orange cursor-pointer text-[1rem] font-medium md:font-semibold"
           >
             Forgot password?
