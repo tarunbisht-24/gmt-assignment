@@ -4,6 +4,7 @@ import Onboarding2 from "./pages/Onboarding2";
 import Onboarding3 from "./pages/Onboarding3";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import ResetPassword from "./pages/ResetPassword";
 import PostLogin from "./pages/PostLogin";
 import TrackingScreen from "./pages/TrackingScreen";
 import PrivateRoute from "./components/PrivateRoute";
@@ -39,6 +40,8 @@ function App() {
           <Route path="/onboard3" element={<Onboarding3 />} />
 
           <Route path="/tracking" element={<TrackingScreen />} />
+
+          <Route path="/resetpassword" element={<ResetPassword />} />
 
           <Route element={<PrivateRoute />}>
             <Route path="/postlogin" element={<PostLogin />} />
