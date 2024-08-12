@@ -48,4 +48,8 @@ export default function ResetPassword() {
       {message && <p className="text-black mt-4">{message}</p>}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cbb117b (Added Forgot Password functionality)
